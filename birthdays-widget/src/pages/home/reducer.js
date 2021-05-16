@@ -1,3 +1,5 @@
+import moment from 'moment';
+
 import {
     LOAD_USERS,
     REQUEST,
@@ -23,13 +25,21 @@ const reducer = (state = initialState, action) => {
                 loaded: false,
             };
         case LOAD_USERS + SUCCESS:
-            // const { [payload.id]: value, ...withoutDeleted } = state.entities;
+
+            // FIXME - refactoring and move me anywhere ?
+
+            const todayBirthdays = payload.users
+                .filter( user =>
+                    moment(user.birthday).format('DD.MM') === moment().format('DD.MM')
+                );
+            const pastBirthdays = payload.users;
+            const upcomingBirthdays = payload.users;
 
             return {
                 ...state,
-                todayBirthdays: [],
-                pastBIrthtodayBirthdays: [],
-                upcomingBIrthtodayBirthdays: [],
+                todayBirthdays,
+                pastBirthdays,
+                upcomingBirthdays,
                 loaded: true,
             };
         case LOAD_USERS + FAILURE:

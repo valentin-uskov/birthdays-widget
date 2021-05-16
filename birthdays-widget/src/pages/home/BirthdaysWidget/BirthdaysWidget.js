@@ -23,7 +23,7 @@ const BirthdaysWidget = ({
 
   useEffect(() => {
     onLoadUsers();
-  }, [onLoadUsers, usersLoaded])
+  }, []) /* onLoadUsers, usersLoaded */
 
   return (
     <StyledBirthdaysWidget>
