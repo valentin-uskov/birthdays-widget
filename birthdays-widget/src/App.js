@@ -18,14 +18,11 @@ const theme = {
   }
 }
 
-const App = () => {
-  return (
-    <ThemeProvider theme={theme}>
-      <Provider store={ store }>
-        <Router />
-      </Provider>
-    </ThemeProvider>
-  );
-}
+const App = () =>
+  <ThemeProvider theme={theme}>
+    <Provider store={ store }>
+      <Router />
+    </Provider>
+  </ThemeProvider>
 
 export default App;

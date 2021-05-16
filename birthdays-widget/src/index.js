@@ -26,6 +26,8 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     font-size: 16px;
+    font-family: VodafoneRg, sans-serif;
+    font-weight: 400;
   }
 `
 ReactDOM.render(

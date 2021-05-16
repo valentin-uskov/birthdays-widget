@@ -1,9 +1,13 @@
-import React, { useEffect, useState } from 'react';
-import { connect } from 'react-redux';
-import { createStructuredSelector } from 'reselect';
+import React from 'react';
 import styled from 'styled-components';
 
 const StyledUserItem = styled.div`
+
+  & img {
+    width: 100px;
+    height: 100px;
+    // add keyframe opacity
+  }
 
 `;
 
@@ -22,15 +26,4 @@ const UserItem = ({user}) => {
   );
 }
 
-const mapStateToProps = createStructuredSelector({
-});
-
-const mapDispatchToProps = dispatch => {
-  return {
-    // onLoadUsers: () => {
-      // dispatch(loadUsers());
-    // }
-  }
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(UserItem);
+export default UserItem;

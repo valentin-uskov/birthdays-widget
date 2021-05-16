@@ -22,12 +22,10 @@ const ErrorPageWrapper = styled.section`
   }
 `;
 
-const ErrorPage = (error = 'Unknown error') => {
-  return (
-    <ErrorPageWrapper>
-      <h1>{error}</h1>
-      <Link to="/">Go home...</Link>
-    </ErrorPageWrapper>
-  );
-};
+const ErrorPage = (error = 'Unknown error') =>
+  <ErrorPageWrapper>
+    <h1>{error}</h1>
+    <Link to="/">Go home...</Link>
+  </ErrorPageWrapper>
+
 export default ErrorPage;

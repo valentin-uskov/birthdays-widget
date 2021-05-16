@@ -1,34 +1,14 @@
-import React, { useEffect, useState } from 'react';
-import { connect } from 'react-redux';
-import { createStructuredSelector } from 'reselect';
+import React from 'react';
 import styled from 'styled-components';
-import UserItem from '../UserItem'
+import UserListItem from '../UsersListItem'
 
 const StyledUsersList = styled.div`
 
 `;
 
-const UsersList = ({ users }) => {
-
-  useEffect(() => {
-  }, [])
-
-  return (
+const UsersList = ({ users }) =>
     <StyledUsersList>
-      { users.map(user => <UserItem key={user.id} user={user} />) }
+      { users.map(user => <UserListItem key={user.id} user={user} />) }
     </StyledUsersList>
-  );
-}
 
-const mapStateToProps = createStructuredSelector({
-});
-
-const mapDispatchToProps = dispatch => {
-  return {
-    // onLoadUsers: () => {
-      // dispatch(loadUsers());
-    // }
-  }
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(UsersList);
+export default UsersList;
