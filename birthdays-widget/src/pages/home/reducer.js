@@ -26,14 +26,16 @@ const reducer = (state = initialState, action) => {
             };
         case LOAD_USERS + SUCCESS:
 
-            // FIXME - refactoring and move me anywhere ?
-
-            const todayBirthdays = payload.users
-                .filter( user =>
-                    moment(user.birthday).format('DD.MM') === moment().format('DD.MM')
-                );
-            const pastBirthdays = payload.users;
-            const upcomingBirthdays = payload.users;
+            // FIXME - refactoring
+            const todayBirthdays = payload.users.filter(user => {
+                    return moment(user.birthday).format('MM.DD') === moment().format('MM.DD');
+                });
+            const pastBirthdays = payload.users.filter(user => {
+                    return moment(user.birthday).format('MM.DD') < moment().format('MM.DD');
+                });
+            const upcomingBirthdays = payload.users.filter(user => {
+                    return moment(user.birthday).format('MM.DD') > moment().format('MM.DD');
+                });
 
             return {
                 ...state,

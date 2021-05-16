@@ -9,6 +9,10 @@ import {
   upcomingBirthdaysSelector,
   pastBirthdaysSelector,
 } from '../../../redux/selectors';
+import Tabs from '../../../components/Tabs';
+import TabPlane from '../../../components/TabPlane';
+import UsersList from '../UsersList';
+
 
 const StyledBirthdaysWidget = styled.div`
 
@@ -23,11 +27,22 @@ const BirthdaysWidget = ({
 
   useEffect(() => {
     onLoadUsers();
-  }, []) /* onLoadUsers, usersLoaded */
+  }, [])
 
   return (
     <StyledBirthdaysWidget>
-      Init start
+        <Tabs>
+            <TabPlane name="Past" key="1">
+              <UsersList users={pastBirthdays} />
+            </TabPlane>
+            <TabPlane name="Today" key="1">
+              <UsersList users={todayBirthdays} />
+            </TabPlane>
+            <TabPlane name="Upcoming" key="1">
+              <UsersList users={upcomingBirthdays} />
+            </TabPlane>
+        </Tabs>
+
     </StyledBirthdaysWidget>
   );
 }
