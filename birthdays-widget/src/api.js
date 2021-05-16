@@ -3,8 +3,6 @@ import moment from 'moment';
 export const loadUsers = async () => {
 
     // FIXME - move me anywhere ?
-    console.log('FIXME - api.js is static')
-
     const dateFrom = moment().subtract(7, 'd').format('MM.DD');
     const dateTo = moment().subtract(-7,'d').format('MM.DD');
 

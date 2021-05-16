@@ -8,9 +8,7 @@ const StyledUsersList = styled.div`
 
 `;
 
-const UsersList = ({
-  users
-}) => {
+const UsersList = ({ users }) => {
 
   useEffect(() => {
   }, [])

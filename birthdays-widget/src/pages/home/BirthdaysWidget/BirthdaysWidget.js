@@ -11,7 +11,7 @@ import {
 } from '../../../redux/selectors';
 import Tabs from '../../../components/Tabs';
 import TabPlane from '../../../components/TabPlane';
-import UsersList from '../UsersList';
+import UsersShortList from '../UsersShortList';
 
 
 const StyledBirthdaysWidget = styled.div`
@@ -33,13 +33,13 @@ const BirthdaysWidget = ({
     <StyledBirthdaysWidget>
         <Tabs>
             <TabPlane name="Past" key="1">
-              <UsersList users={pastBirthdays} />
+              <UsersShortList users={pastBirthdays} />
             </TabPlane>
-            <TabPlane name="Today" key="1">
-              <UsersList users={todayBirthdays} />
+            <TabPlane name="Today" key="2">
+              <UsersShortList users={todayBirthdays} />
             </TabPlane>
-            <TabPlane name="Upcoming" key="1">
-              <UsersList users={upcomingBirthdays} />
+            <TabPlane name="Upcoming" key="3">
+              <UsersShortList users={upcomingBirthdays} />
             </TabPlane>
         </Tabs>
 
