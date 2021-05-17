@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import TabPane from "../TabPane";
+import React, { useEffect, useState } from 'react';
+import TabPane from '../TabPane';
 
 const Tabs = (props) => {
 
@@ -50,7 +50,7 @@ const Tabs = (props) => {
 
       <div>
         {Object.keys(childContent).map((key) => {
-          if (key !== active) return null
+          if (key !== active) return null;
           return <div key={key}>{childContent[key]}</div>;
         })}
       </div>
@@ -67,7 +67,7 @@ Tabs.propTypes = {
     React.Children.forEach(prop, function (child) {
       if (child.type !== TabPane) {
         error = new Error(
-          "`" + componentName + "` children should be of type `TabPane`."
+          '`' + componentName + '` children should be of type `TabPane`.'
         );
       }
     });

@@ -11,7 +11,7 @@ export const loadUsers = () => async (dispatch) => {
   dispatch({ type: LOAD_USERS + REQUEST });
 
   try {
-    const isFebruary28Today = moment().format('MM.DD') === moment('05.28').format('MM.DD');
+    const isFebruary28Today = moment().format('MM.DD') === moment('02.28').format('MM.DD');
     const isLeapYear = moment().isLeapYear();
     const daysBeforeAmount = 14;
     const daysAfterAmount = (isFebruary28Today && !isLeapYear) ? 15 : 14;

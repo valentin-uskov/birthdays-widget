@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import UsersList from '../UsersList'
+import PropTypes from 'prop-types';
 
 const UsersShortList = ({ users }) => {
 
@@ -26,10 +27,14 @@ const UsersShortList = ({ users }) => {
       { <UsersList users={usersToShow}/> }
       {
         (usersToShow.length !== users.length)
-        && <button onClick={showMoreClickHandler}>SHOW MORE</button>
+        && <button onClick={showMoreClickHandler}>Show more</button>
       }
     </>
   );
 }
+
+UsersList.propTypes = {
+  users: PropTypes.array.isRequired,
+};
 
 export default UsersShortList;

@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
-const StyledUserItem = styled.div`
+const StyledUsersListItem = styled.div`
 
   & img {
     width: 100px;
@@ -11,19 +12,28 @@ const StyledUserItem = styled.div`
 
 `;
 
-const UserItem = ({user}) => {
+const UsersListItem = ({user}) => {
   const { name, birthday, avatarUrl, jobTitle } = user;
 
   return (
-    <StyledUserItem>
+    <StyledUsersListItem>
       <div>
         <img src={`https://birthday-api.anromsocial.com${avatarUrl}`} alt={name} />
       </div>
       <h3>{name}</h3>
       <h4>{jobTitle}</h4>
       <time>{birthday}</time>
-    </StyledUserItem>
+    </StyledUsersListItem>
   );
 }
 
-export default UserItem;
+UsersListItem.propTypes = {
+  user: PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      birthday: PropTypes.string,
+      avatarUrl: PropTypes.string,
+      jobTitle: PropTypes.string,
+    }).isRequired
+};
+
+export default UsersListItem;

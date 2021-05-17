@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 import styled, { keyframes } from 'styled-components';
+import PropTypes from 'prop-types';
 import { loadUsers } from '../actions';
 import {
   usersLoadedSelector,
@@ -91,6 +92,13 @@ const mapDispatchToProps = dispatch => {
       dispatch(loadUsers());
     }
   }
+};
+
+BirthdaysWidget.propTypes = {
+  todayBirthdays: PropTypes.array.isRequired,
+  upcomingBirthdays: PropTypes.array.isRequired,
+  pastBirthdays: PropTypes.array.isRequired,
+  onLoadUsers: PropTypes.func.isRequired
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(BirthdaysWidget);
