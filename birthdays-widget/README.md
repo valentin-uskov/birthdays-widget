@@ -2,57 +2,63 @@
 This widget displays the past, current and upcoming birthdays of users.
 
 ### Project structure
-📦birthdays-widget
- ┣ 📂public
- ┃ ┣ 📜favicon.ico
- ┃ ┣ 📜index.html
- ┃ ┗ 📜robots.txt
- ┣ 📂src
- ┃ ┣ 📂assets
- ┃ ┃ ┣ 📂fonts
- ┃ ┃ ┃ ┣ 📜VodafoneRg-Bold.woff
- ┃ ┃ ┃ ┣ 📜VodafoneRg-Bold.woff2
- ┃ ┃ ┃ ┣ 📜VodafoneRg-Regular.woff
- ┃ ┃ ┃ ┗ 📜VodafoneRg-Regular.woff2
- ┃ ┃ ┗ 📂images
- ┃ ┃ ┃ ┗ 📜gift.png
- ┃ ┣ 📂components
- ┃ ┃ ┣ 📂TabPane
- ┃ ┃ ┃ ┣ 📜TabPane.js
- ┃ ┃ ┃ ┗ 📜index.js
- ┃ ┃ ┗ 📂Tabs
- ┃ ┃ ┃ ┣ 📜Tabs.js
- ┃ ┃ ┃ ┗ 📜index.js
- ┃ ┣ 📂pages
- ┃ ┃ ┣ 📂error
- ┃ ┃ ┃ ┣ 📜ErrorPage.js
- ┃ ┃ ┃ ┗ 📜index.js
- ┃ ┃ ┣ 📂home
- ┃ ┃ ┃ ┣ 📂BirthdaysWidget
- ┃ ┃ ┃ ┃ ┣ 📜BirthdaysWidget.js
- ┃ ┃ ┃ ┃ ┗ 📜index.js
- ┃ ┃ ┃ ┣ 📂UsersList
- ┃ ┃ ┃ ┃ ┣ 📜UsersList.js
- ┃ ┃ ┃ ┃ ┗ 📜index.js
- ┃ ┃ ┃ ┣ 📂UsersListItem
- ┃ ┃ ┃ ┃ ┣ 📜UsersListItem.js
- ┃ ┃ ┃ ┃ ┗ 📜index.js
- ┃ ┃ ┃ ┣ 📂UsersShortList
- ┃ ┃ ┃ ┃ ┣ 📜UsersShortList.js
- ┃ ┃ ┃ ┃ ┗ 📜index.js
- ┃ ┃ ┃ ┣ 📜actions.js
- ┃ ┃ ┃ ┣ 📜constants.js
- ┃ ┃ ┃ ┣ 📜index.js
- ┃ ┃ ┃ ┣ 📜reducer.js
- ┃ ┃ ┃ ┗ 📜selectors.js
- ┃ ┃ ┗ 📜Router.js
- ┃ ┣ 📂redux
- ┃ ┃ ┣ 📜reducer.js
- ┃ ┃ ┗ 📜store.js
- ┃ ┣ 📜App.js
- ┃ ┣ 📜api.js
- ┃ ┣ 📜history.js
- ┃ ┣ 📜index.js
+# birthdays-widget
+* [public/](./birthdays-widget/public)
+  * [favicon.ico](./birthdays-widget/public/favicon.ico)
+  * [index.html](./birthdays-widget/public/index.html)
+  * [robots.txt](./birthdays-widget/public/robots.txt)
+* [src/](./birthdays-widget/src)
+  * [assets/](./birthdays-widget/src/assets)
+    * [fonts/](./birthdays-widget/src/assets/fonts)
+      * [VodafoneRg-Bold.woff](./birthdays-widget/src/assets/fonts/VodafoneRg-Bold.woff)
+      * [VodafoneRg-Bold.woff2](./birthdays-widget/src/assets/fonts/VodafoneRg-Bold.woff2)
+      * [VodafoneRg-Regular.woff](./birthdays-widget/src/assets/fonts/VodafoneRg-Regular.woff)
+      * [VodafoneRg-Regular.woff2](./birthdays-widget/src/assets/fonts/VodafoneRg-Regular.woff2)
+    * [images/](./birthdays-widget/src/assets/images)
+      * [gift.png](./birthdays-widget/src/assets/images/gift.png)
+  * [components/](./birthdays-widget/src/components)
+    * [TabPane/](./birthdays-widget/src/components/TabPane)
+      * [TabPane.js](./birthdays-widget/src/components/TabPane/TabPane.js)
+      * [index.js](./birthdays-widget/src/components/TabPane/index.js)
+    * [Tabs/](./birthdays-widget/src/components/Tabs)
+      * [Tabs.js](./birthdays-widget/src/components/Tabs/Tabs.js)
+      * [index.js](./birthdays-widget/src/components/Tabs/index.js)
+  * [pages/](./birthdays-widget/src/pages)
+    * [error/](./birthdays-widget/src/pages/error)
+      * [ErrorPage.js](./birthdays-widget/src/pages/error/ErrorPage.js)
+      * [index.js](./birthdays-widget/src/pages/error/index.js)
+    * [home/](./birthdays-widget/src/pages/home)
+      * [BirthdaysWidget/](./birthdays-widget/src/pages/home/BirthdaysWidget)
+        * [BirthdaysWidget.js](./birthdays-widget/src/pages/home/BirthdaysWidget/BirthdaysWidget.js)
+        * [index.js](./birthdays-widget/src/pages/home/BirthdaysWidget/index.js)
+      * [UsersList/](./birthdays-widget/src/pages/home/UsersList)
+        * [UsersList.js](./birthdays-widget/src/pages/home/UsersList/UsersList.js)
+        * [index.js](./birthdays-widget/src/pages/home/UsersList/index.js)
+      * [UsersListItem/](./birthdays-widget/src/pages/home/UsersListItem)
+        * [UsersListItem.js](./birthdays-widget/src/pages/home/UsersListItem/UsersListItem.js)
+        * [index.js](./birthdays-widget/src/pages/home/UsersListItem/index.js)
+      * [UsersShortList/](./birthdays-widget/src/pages/home/UsersShortList)
+        * [UsersShortList.js](./birthdays-widget/src/pages/home/UsersShortList/UsersShortList.js)
+        * [index.js](./birthdays-widget/src/pages/home/UsersShortList/index.js)
+      * [actions.js](./birthdays-widget/src/pages/home/actions.js)
+      * [constants.js](./birthdays-widget/src/pages/home/constants.js)
+      * [index.js](./birthdays-widget/src/pages/home/index.js)
+      * [reducer.js](./birthdays-widget/src/pages/home/reducer.js)
+      * [selectors.js](./birthdays-widget/src/pages/home/selectors.js)
+    * [Router.js](./birthdays-widget/src/pages/Router.js)
+  * [redux/](./birthdays-widget/src/redux)
+    * [reducer.js](./birthdays-widget/src/redux/reducer.js)
+    * [store.js](./birthdays-widget/src/redux/store.js)
+  * [App.js](./birthdays-widget/src/App.js)
+  * [api.js](./birthdays-widget/src/api.js)
+  * [history.js](./birthdays-widget/src/history.js)
+  * [index.js](./birthdays-widget/src/index.js)
+  * [setupTests.js](./birthdays-widget/src/setupTests.js)
+* [.env](./birthdays-widget/.env)
+* [README.md](./birthdays-widget/README.md)
+* [package.json](./birthdays-widget/package.json)
+*
+
 
 ### Diagram draft 
 x-special/nautilus-clipboard
