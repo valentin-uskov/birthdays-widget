@@ -2,25 +2,27 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import { createGlobalStyle } from 'styled-components';
-
-export function fontFace(name, src, fontWeight = 'normal', fontStyle = 'normal'){
-    return `
-      @font-face{
-          font-family: "${name}";
-          src: url(${require('./assets/fonts/' + src + '.eot')});
-          src: url(${require('./assets/fonts/' + src + '.eot')}?#iefix) format("embedded-opentype"),
-               url(${require('./assets/fonts/' + src + '.woff')}) format("woff"),
-               url(${require('./assets/fonts/' + src + '.ttf')}) format("truetype"),
-               url(${require('./assets/fonts/' + src + '.svg')}#${name}) format("svg");
-          font-style: ${fontStyle};
-          font-weight: ${fontWeight};
-      }
-  `;
-}
+import VodafoneRgRegularWOFF2 from './assets/fonts/VodafoneRg-Regular.woff2';
+import VodafoneRgRegularWOFF from './assets/fonts/VodafoneRg-Regular.woff';
+import VodafoneRgBoldWOFF2 from './assets/fonts/VodafoneRg-Bold.woff2';
+import VodafoneRgBoldWOFF from './assets/fonts/VodafoneRg-Bold.woff';
 
 const GlobalStyle = createGlobalStyle`
-  ${fontFace('VodafoneRg', 'VodafoneRg-Bold', 400, 'normal')}
-  ${fontFace('VodafoneRg', 'VodafoneRg-Regular', 700, 'normal')}
+  @font-face{
+    font-family: "VodafoneRg";
+    src: url(${VodafoneRgRegularWOFF}) format("woff"),
+         url(${VodafoneRgRegularWOFF2}) format("woff2");
+    font-style: normal;
+    font-weight: 400;
+  }
+
+  @font-face{
+    font-family: "VodafoneRg";
+    src: url(${VodafoneRgBoldWOFF}) format("woff"),
+         url(${VodafoneRgBoldWOFF2}) format("woff2");
+    font-style: normal;
+    font-weight: 700;
+  }
 
   * {
     margin: 0;

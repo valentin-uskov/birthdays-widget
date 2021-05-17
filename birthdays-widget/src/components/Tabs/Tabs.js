@@ -90,7 +90,7 @@ Tabs.propTypes = {
     React.Children.forEach(prop, function (child) {
       if (child.type !== TabPane) {
         error = new Error(
-          '`' + componentName + '` children should be of type `TabPane`.'
+          `${componentName} children should be of type ${TabPane}.`
         );
       }
     });

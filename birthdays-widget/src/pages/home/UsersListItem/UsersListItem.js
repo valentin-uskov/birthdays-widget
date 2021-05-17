@@ -43,7 +43,7 @@ const UsersListItem = ({user}) => {
 
   return (
     <StyledUsersListItem>
-      <img src={`https://birthday-api.anromsocial.com${avatarUrl}`} alt={name} />
+      <img src={`${process.env.REACT_APP_API_URL}${avatarUrl}`} alt={name} />
       <div className='info-box'>
         <h3>{name}</h3>
         <h4>{jobTitle}</h4>
