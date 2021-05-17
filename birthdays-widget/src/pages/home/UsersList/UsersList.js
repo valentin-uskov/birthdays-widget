@@ -4,9 +4,17 @@ import PropTypes from 'prop-types';
 
 import UserListItem from '../UsersListItem'
 
-
 const StyledUsersList = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 540px;
+  margin: 30px auto;
 
+  @media ${props => props.theme.media.small } {
+    max-width: 100%;
+    margin: 30px 0;
+  }
 `;
 
 const UsersList = ({ users }) =>

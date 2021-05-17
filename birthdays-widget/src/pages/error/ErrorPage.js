@@ -4,15 +4,12 @@ import styled from 'styled-components';
 
 const ErrorPageWrapper = styled.section`
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   justify-content: center;
-  align-content: center;
-  height: 100vh;
-  width: 100vw;
-  padding: 2em;
-  box-sizing: border-box;
+  margin: 10vh;
 
   & > h1 {
+    font-size: 32px;
     text-align: center;
   }
 

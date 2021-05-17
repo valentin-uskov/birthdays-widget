@@ -6,7 +6,7 @@ import { Provider } from 'react-redux';
 const theme = {
   colors: {
     main: '#D80027',
-    gradient: '#E8E8E8',
+    gradientStart: '#E8E8E8',
     text: {
       darkGray: '#333333',
       lightGray: '#666666',
@@ -14,7 +14,7 @@ const theme = {
     }
   },
   media: {
-      mobile: '(max-width: 992px)',
+      small: '(max-width: 640px)',
   }
 }
 

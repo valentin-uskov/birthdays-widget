@@ -26,6 +26,7 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     font-size: 16px;
+    line-height: 1.3;
     font-family: VodafoneRg, sans-serif;
     font-weight: 400;
   }
