@@ -2,7 +2,7 @@
 This widget displays the past, current and upcoming birthdays of users.
 
 ### Project structure
-# birthdays-widget
+
 * [public/](./birthdays-widget/public)
   * [favicon.ico](./birthdays-widget/public/favicon.ico)
   * [index.html](./birthdays-widget/public/index.html)
@@ -57,13 +57,11 @@ This widget displays the past, current and upcoming birthdays of users.
 * [.env](./birthdays-widget/.env)
 * [README.md](./birthdays-widget/README.md)
 * [package.json](./birthdays-widget/package.json)
-*
 
 
 ### Diagram draft 
-x-special/nautilus-clipboard
-copy
-file:///home/valentin/Desktop/ANROM%20materials/ANROM_diagram.jpg
+
+![birthday_widget_diagram](https://user-images.githubusercontent.com/5973178/118448951-48d69100-b6fb-11eb-9e0e-1969caff52aa.jpg)
 
 
 ## Available Scripts
